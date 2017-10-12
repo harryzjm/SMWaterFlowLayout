@@ -126,9 +126,8 @@ extension SMWaterFlowLayout {
     }
 
     fileprivate func manage(delegate dg: UICollectionViewDelegate?) {
-        delegate = dg as? SMWaterFlowLayoutDelegate
-
-        guard let _ = delegate else { return }
+        guard let nDelegate = dg as? SMWaterFlowLayoutDelegate else { return }
+        delegate = nDelegate
         DispatchQueue.main.async { [weak self] in
             self?.collectionView?.reloadData()
         }
