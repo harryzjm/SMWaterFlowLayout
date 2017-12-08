@@ -15,6 +15,7 @@
 		60993CF91F8DF249002D6A3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60993CF81F8DF249002D6A3C /* Assets.xcassets */; };
 		60993D061F8DF4CA002D6A3C /* SMWaterFlowLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60993CC91F8DCB8C002D6A3C /* SMWaterFlowLayout.framework */; };
 		60993D071F8DF4CA002D6A3C /* SMWaterFlowLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60993CC91F8DCB8C002D6A3C /* SMWaterFlowLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		60D38FB11FDA995600821BC5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60D38FB01FDA995600821BC5 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		60993CF31F8DF249002D6A3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		60993CF81F8DF249002D6A3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60993CFD1F8DF249002D6A3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60D38FB01FDA995600821BC5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				60993CF11F8DF249002D6A3C /* AppDelegate.swift */,
 				60993CF31F8DF249002D6A3C /* ViewController.swift */,
 				603C58501F8E5CB9004C1B0A /* HeaderV.swift */,
+				60D38FB01FDA995600821BC5 /* Launch Screen.storyboard */,
 				60993CF81F8DF249002D6A3C /* Assets.xcassets */,
 				60993CFD1F8DF249002D6A3C /* Info.plist */,
 			);
@@ -224,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60D38FB11FDA995600821BC5 /* Launch Screen.storyboard in Resources */,
 				60993CF91F8DF249002D6A3C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,15 +427,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24XKMNFTCK;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hares.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -440,15 +444,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24XKMNFTCK;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hares.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

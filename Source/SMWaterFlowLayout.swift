@@ -59,17 +59,18 @@ public class SMWaterFlowLayout: UICollectionViewLayout {
         else { return }
 
         attArr.removeAll()
+        supplementaryAtts.removeAll()
+        
         let sectionCount = dataSource.numberOfSections?(in: collectV) ?? 1
         for section in 0 ..< sectionCount {
             let itemCount = dataSource.collectionView(collectV, numberOfItemsInSection: section)
             for row in 0 ..< itemCount {
                 let att = UICollectionViewLayoutAttributes(forCellWith: IndexPath(item: row, section: section))
-
                 modify(layout: att)
                 attArr.append(att)
             }
         }
-
+        
         if headerViewLength > 0 {
             let header = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, with: IndexPath(item: 0, section: 0))
             header.frame.size = makeSize(length: headerViewLength)

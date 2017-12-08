@@ -18,7 +18,7 @@ extension CGFloat {
 }
 
 class ViewController: UICollectionViewController, SMWaterFlowLayoutDelegate {
-    var arr: [CGFloat] = (10 ... 20).map {_ in CGFloat.random(1) }
+    var arr: [CGFloat] = (10 ... 100).map {_ in CGFloat.random(1) }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class ViewController: UICollectionViewController, SMWaterFlowLayoutDelegate {
 
         let ly = collectionViewLayout as? SMWaterFlowLayout
         ly?.lineCount = 3
-        ly?.scrollDirection = .horizontal
+        ly?.scrollDirection = .vertical
         ly?.lineSpacing = 10
         ly?.interitemSpacing = 10
         ly?.edgeInset = UIEdgeInsets(top: 20, left: 30, bottom: 40, right: 50)
@@ -37,6 +37,24 @@ class ViewController: UICollectionViewController, SMWaterFlowLayoutDelegate {
         collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: UICollectionViewCell.description())
         collectionView?.register(HeaderV.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: HeaderV.description())
         collectionView?.register(HeaderV.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: HeaderV.description())
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(orientationChanged(not:)), name: .UIDeviceOrientationDidChange, object: nil)
+    }
+    
+    @objc func orientationChanged(not: Notification) {
+        let orientation = UIDevice.current.orientation
+        let ly = collectionViewLayout as? SMWaterFlowLayout
+        switch orientation {
+        case .portrait: fallthrough
+        case .portraitUpsideDown:
+            ly?.lineCount = 3
+        case .landscapeLeft: fallthrough
+        case .landscapeRight:
+            ly?.lineCount = 4
+        case .faceUp: break
+        case .faceDown: break
+        case .unknown: break
+        }
     }
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
