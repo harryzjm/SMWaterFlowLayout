@@ -22,6 +22,7 @@ class ViewController: UICollectionViewController, SMWaterFlowLayoutDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         collectionView?.backgroundColor = .white
         title = "Demo"
 

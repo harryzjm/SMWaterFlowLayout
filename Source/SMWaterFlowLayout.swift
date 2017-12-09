@@ -116,6 +116,13 @@ public class SMWaterFlowLayout: UICollectionViewLayout {
     override public var collectionViewContentSize: CGSize {
         return makeSize(length: caculateMaxLength())
     }
+    
+    private var beforeSize: CGSize = .zero
+    override public func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+        let size = newBounds.size
+        defer { beforeSize = size }
+        return size != beforeSize
+    }
 }
 
 extension SMWaterFlowLayout {

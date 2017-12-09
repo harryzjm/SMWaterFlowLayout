@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "SMWaterFlowLayout"
-s.version      = "1.0.1"
+s.version      = "1.0.2"
 s.summary      = "SMWaterFlowLayout is a subclass of UICollectionViewFlowLayout, easy to use."
 # s.description  = <<-DESC
 # 				 SMWaterFlowLayout is a subclass of UICollectionViewFlowLayout, easy to use.
